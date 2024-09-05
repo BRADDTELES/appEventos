@@ -7,35 +7,70 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Gerenciamento de Eventos"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="16dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp">
 
-    <EditText
-        android:id="@+id/editTextText"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Gerenciamento de Eventos"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dataEscolhidaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        tools:layout_editor_absoluteY="53dp" />
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/label_data_escolhida"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/nomeEditText"
+        tools:layout_editor_absoluteX="152dp" />
 
     <TextView
         android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/text_view_name_evento"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="139dp"
+        android:layout_height="44dp"
+        android:onClick="escolherDataButtonAction"
+        android:text="@string/label_escolher_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/nomeEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Nome do Evento:"
-        android:textSize="13sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="62dp" />
+        android:ems="10"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="Name"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
