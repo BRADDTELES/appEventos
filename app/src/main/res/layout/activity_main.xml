@@ -31,46 +31,51 @@
         android:id="@+id/dataEscolhidaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="sans-serif"
         android:text="@string/label_data_escolhida"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/nomeEditText"
-        tools:layout_editor_absoluteX="152dp" />
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="100dp"
         android:layout_height="29dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif"
         android:text="@string/text_view_name_evento"
         android:textSize="13sp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="139dp"
-        android:layout_height="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
         android:onClick="escolherDataButtonAction"
         android:text="@string/label_escolher_data"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
         android:id="@+id/nomeEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="273dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:fontFamily="casual"
         android:gravity="center"
         android:inputType="text"
+        android:minHeight="48dp"
         android:text="Name"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

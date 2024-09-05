@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         dataEscolhidaTextView = findViewById(R.id.dataEscolhidaTextView);
     }
 
-    public void escolherDataButtonAction(View view) {
+    public void escolherDataButtonAction(View view){
 
         UtilDate utilDate = new UtilDate();
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 month++;
                 dataEscolhidaTextView.setText("" + dayOfMonth + "/" + month + "/" + year);
             }
-        }, utilDate.getAnoAtual(), utilDate.getMesAtual(), utilDate.getDiaAtual());
+        }, utilDate.getAnoAtual(), utilDate.getMesAtual(), utilDate.getDiaAtual() );
         datePickerDialog.show();
     }
 }
