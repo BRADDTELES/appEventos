@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     EditText nomeEditText;
     TextView dataEscolhidaTextView;
     TextView horaSelecionadaTextView;
-    Button selecionarHoraButton;
+    Button selecionarHoraInicialButton;
+    Button selecionarHoraFinalButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
         nomeEditText = findViewById(R.id.nomeEditText);
         dataEscolhidaTextView = findViewById(R.id.dataEscolhidaTextView);
 
-        horaSelecionadaTextView = findViewById(R.id.horaSelecionadaTextView);
-        selecionarHoraButton = findViewById(R.id.selecionarHoraButton);
+        horaSelecionadaTextView = findViewById(R.id.horaInicialSelecionadaTextView);
+        selecionarHoraInicialButton = findViewById(R.id.selecionarHoraInicialButton);
+        selecionarHoraFinalButton = findViewById(R.id.selecionarHoraFinalButton);
 //        horaSelecionadaTextView.setText("Hora selecionada: Nenhuma");
 //        selecionarHoraButton.setText("Selecionar hora inicial");
     }

@@ -7,4 +7,5 @@
     <string name="label_hora_inicial">Hora Inicial</string>
     <string name="label_hora_inicial_selecionada">Hora selecionada: Nenhuma</string>
     <string name="label_hora_final">Hora Final</string>
+    <string name="label_hora_final_selecionada">Hora selecionada: Nenhuma</string>
 </resources>
