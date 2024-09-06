@@ -150,8 +150,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="100dp"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
         android:layout_marginStart="10dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +159,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:orientation="horizontal">
 
             <TextView
@@ -169,7 +169,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/text_view_nivel" />
+                android:text="@string/text_view_nivel"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -178,13 +179,22 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/text_view_000" />
+                android:text="@string/text_view_000"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"></LinearLayout>
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
