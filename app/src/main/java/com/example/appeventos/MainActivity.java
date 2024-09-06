@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Button selecionarHoraFinalButton;
     TextView numeracaoNivelTextView;
     SeekBar numeracaoNivelSeekBar;
+    TextView convidadoTextView;
+    NumberPicker convidadoNumberPicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        convidadoTextView = findViewById(R.id.convidadoTextView);
+        convidadoNumberPicker = findViewById(R.id.convidadoNumberPicker);
+
+        convidadoNumberPicker.setMinValue(0);
+        convidadoNumberPicker.setMaxValue(500);
+
+        convidadoNumberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker numberPicker, int oldVal, int newVal) {
+                convidadoTextView.setText("Número de convidados: \n" + newVal);
             }
         });
     }
