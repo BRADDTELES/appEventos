@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     TextView horaFinalSelecionadaTextView;
     Button selecionarHoraInicialButton;
     Button selecionarHoraFinalButton;
+    TextView numeracaoNivelTextView;
+    SeekBar numeracaoNivelSeekBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +37,36 @@ public class MainActivity extends AppCompatActivity {
 
         horaInicialSelecionadaTextView = findViewById(R.id.horaInicialSelecionadaTextView);
         selecionarHoraInicialButton = findViewById(R.id.selecionarHoraInicialButton);
-
         horaFinalSelecionadaTextView = findViewById(R.id.horaFinalSelecionadaTextView);
         selecionarHoraFinalButton = findViewById(R.id.selecionarHoraFinalButton);
-//        horaSelecionadaTextView.setText("Hora selecionada: Nenhuma");
-//        selecionarHoraButton.setText("Selecionar hora inicial");
+
+        numeracaoNivelTextView = findViewById(R.id.numeracaoNivelTextView);
+        numeracaoNivelSeekBar = findViewById(R.id.numeracaoNivelSeekBar);
+
+        numeracaoNivelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
+                String nivelFormatado;
+                if (progress < 10) {
+                    nivelFormatado = "00" + progress;
+                } else {
+                    if (progress > 99) {
+                        nivelFormatado = "" + progress;
+                    } else {
+                        nivelFormatado = "0" + progress;
+                    }
+                }
+                numeracaoNivelTextView.setText("" + progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
     }
 
     public void escolherDataButtonAction(View view){
@@ -73,4 +101,5 @@ public class MainActivity extends AppCompatActivity {
         }, UtilTime.getHoraAtual(), UtilTime.getMinutoAtual(), true);
         timePickerDialog.show();
     }
+
 }
