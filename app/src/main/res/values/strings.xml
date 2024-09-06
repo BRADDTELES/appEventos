@@ -8,4 +8,6 @@
     <string name="label_hora_inicial_selecionada">Hora selecionada: Nenhuma</string>
     <string name="label_hora_final">Hora Final</string>
     <string name="label_hora_final_selecionada">Hora selecionada: Nenhuma</string>
+    <string name="text_view_nivel">Nível de importãncia</string>
+    <string name="text_view_000">000</string>
 </resources>
