@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText nomeEditText;
     TextView dataEscolhidaTextView;
-    TextView horaSelecionadaTextView;
+    TextView horaInicialSelecionadaTextView;
+    TextView horaFinalSelecionadaTextView;
     Button selecionarHoraInicialButton;
     Button selecionarHoraFinalButton;
 
@@ -31,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
         nomeEditText = findViewById(R.id.nomeEditText);
         dataEscolhidaTextView = findViewById(R.id.dataEscolhidaTextView);
 
-        horaSelecionadaTextView = findViewById(R.id.horaInicialSelecionadaTextView);
+        horaInicialSelecionadaTextView = findViewById(R.id.horaInicialSelecionadaTextView);
         selecionarHoraInicialButton = findViewById(R.id.selecionarHoraInicialButton);
+
+        horaFinalSelecionadaTextView = findViewById(R.id.horaFinalSelecionadaTextView);
         selecionarHoraFinalButton = findViewById(R.id.selecionarHoraFinalButton);
 //        horaSelecionadaTextView.setText("Hora selecionada: Nenhuma");
 //        selecionarHoraButton.setText("Selecionar hora inicial");
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                horaSelecionadaTextView.setText("" + hourOfDay + ":" + minute);
+                horaInicialSelecionadaTextView.setText("" + hourOfDay + ":" + minute);
             }
         }, UtilTime.getHoraAtual(), UtilTime.getMinutoAtual(), true);
         timePickerDialog.show();
@@ -65,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                horaSelecionadaTextView.setText("" + hourOfDay + ":" + minute);
+                horaFinalSelecionadaTextView.setText("" + hourOfDay + ":" + minute);
             }
         }, UtilTime.getHoraAtual(), UtilTime.getMinutoAtual(), true);
         timePickerDialog.show();
