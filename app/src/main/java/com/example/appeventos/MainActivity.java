@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -27,8 +28,15 @@ public class MainActivity extends AppCompatActivity {
     Button selecionarHoraFinalButton;
     TextView numeracaoNivelTextView;
     SeekBar numeracaoNivelSeekBar;
+
+    String [] eventos = new String[3];
+    TextView eventoTextView;
+    ImageView eventoImageView;
+    NumberPicker eventoNumberPicker;
+
     TextView convidadoTextView;
     NumberPicker convidadoNumberPicker;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
         numeracaoNivelTextView = findViewById(R.id.numeracaoNivelTextView);
         numeracaoNivelSeekBar = findViewById(R.id.numeracaoNivelSeekBar);
+
+        
 
         numeracaoNivelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -81,6 +91,38 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onValueChange(NumberPicker numberPicker, int oldVal, int newVal) {
                 convidadoTextView.setText("Número de convidados: \n" + newVal);
+            }
+        });
+
+        eventoTextView = findViewById(R.id.eventoTextView);
+        eventoImageView = findViewById(R.id.eventoImageView);
+        eventoNumberPicker = findViewById(R.id.eventoNumberPicker);
+
+        eventos[0] = "Festivo";
+        eventos[1] = "Coorporativo";
+        eventos[2] = "Casamento";
+
+        eventoNumberPicker.setDisplayedValues(eventos);
+
+        eventoNumberPicker.setMinValue(0);
+        eventoNumberPicker.setMaxValue(2);
+
+        eventoNumberPicker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                String eventoSelecionado = eventos[newVal];
+                if (eventoSelecionado.equalsIgnoreCase("Festivo")){
+                    eventoImageView.setImageResource(R.drawable.festivo);
+                    eventoTextView.setText("Festivo");
+                } else {
+                    if (eventoSelecionado.equalsIgnoreCase("Coorporativo")){
+                        eventoImageView.setImageResource(R.drawable.coorporativo);
+                        eventoTextView.setText("Coorporativo");
+                    } else {
+                        eventoImageView.setImageResource(R.drawable.casamento);
+                        eventoTextView.setText("Casamento");
+                    }
+                }
             }
         });
     }
