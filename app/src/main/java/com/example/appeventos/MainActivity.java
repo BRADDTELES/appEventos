@@ -113,14 +113,14 @@ public class MainActivity extends AppCompatActivity {
                 String eventoSelecionado = eventos[newVal];
                 if (eventoSelecionado.equalsIgnoreCase("Festivo")){
                     eventoImageView.setImageResource(R.drawable.festivo);
-                    eventoTextView.setText("Festivo");
+//                    eventoTextView.setText("Festivo");
                 } else {
                     if (eventoSelecionado.equalsIgnoreCase("Coorporativo")){
                         eventoImageView.setImageResource(R.drawable.coorporativo);
-                        eventoTextView.setText("Coorporativo");
+//                        eventoTextView.setText("Coorporativo");
                     } else {
                         eventoImageView.setImageResource(R.drawable.casamento);
-                        eventoTextView.setText("Casamento");
+//                        eventoTextView.setText("Casamento");
                     }
                 }
             }

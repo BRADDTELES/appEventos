@@ -2,6 +2,7 @@
     <string name="app_name">app Eventos</string>
 
     <string name="text_view_name_evento">Nome do Evento:</string>
+    <string name="text_view_n_convidado">Nº de convidados:</string>
     <string name="label_data_escolhida">Data Escolhida: Nenhuma</string>
     <string name="label_escolher_data">Escolher Data</string>
     <string name="label_hora_inicial">Hora Inicial</string>
