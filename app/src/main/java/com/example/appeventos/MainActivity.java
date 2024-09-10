@@ -20,6 +20,7 @@ import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.appeventos.persistencia.Persistencia;
 import com.example.appeventos.util.UtilDate;
 import com.example.appeventos.util.UtilTime;
 
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup tipoEventoRadioGroup;
     TextView tpEventoSelecionadoTextView;
 
+    EditText usuarioEditText;
+    EditText senhaEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
         numeracaoNivelTextView = findViewById(R.id.numeracaoNivelTextView);
         numeracaoNivelSeekBar = findViewById(R.id.numeracaoNivelSeekBar);
-
-        
 
         numeracaoNivelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -175,6 +177,9 @@ public class MainActivity extends AppCompatActivity {
                 tpEventoSelecionadoTextView.setText(opcaoSelecionada);
             }
         });
+
+        usuarioEditText = findViewById(R.id.usuarioEditText);
+        senhaEditText = findViewById(R.id.senhaEditText);
     }
 
     public void escolherDataButtonAction(View view){
@@ -208,6 +213,20 @@ public class MainActivity extends AppCompatActivity {
             }
         }, UtilTime.getHoraAtual(), UtilTime.getMinutoAtual(), true);
         timePickerDialog.show();
+    }
+
+    public void salvarButtonAction(View view) {
+        String usuario = usuarioEditText.getText().toString();
+        String senha = senhaEditText.getText().toString();
+        Persistencia.setUsuario(this, usuario);
+        Persistencia.setSenha(this, senha);
+    }
+
+    public void carregarButtonAction(View view) {
+        String usuario = Persistencia.getUsuario(this);
+        String senha = Persistencia.getSenha(this);
+        usuarioEditText.setText(usuario);
+        senhaEditText.setText(senha);
     }
 
 }

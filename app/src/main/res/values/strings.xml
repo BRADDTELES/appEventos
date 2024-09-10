@@ -3,8 +3,8 @@
 
     <string name="text_view_name_evento">Nome do Evento:</string>
     <string name="text_view_n_convidado">Nº de convidados:</string>
-    <string name="label_data_escolhida">Data Escolhida: Nenhuma</string>
-    <string name="label_escolher_data">Escolher Data</string>
+    <string name="label_data_escolhida">Data selecionada: Nenhuma</string>
+    <string name="label_escolher_data">Data</string>
     <string name="label_hora_inicial">Hora Inicial</string>
     <string name="label_hora_inicial_selecionada">Hora selecionada: Nenhuma</string>
     <string name="label_hora_final">Hora Final</string>
@@ -26,5 +26,5 @@
     <string name="text_view_usuario">Usuaŕio:</string>
     <string name="text_view_senha">Senha:</string>
     <string name="button_salvar">Salvar</string>
-    <string name="button_cancelar">Cancelar</string>
+    <string name="button_carregar">Carregar</string>
 </resources>

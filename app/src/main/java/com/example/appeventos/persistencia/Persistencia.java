@@ -1,6 +1,7 @@
 package com.example.appeventos.persistencia;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.example.appeventos.ENUM.DEFAULT_VALUES;
 import com.example.appeventos.ENUM.SHARED_PREFERENCES;
