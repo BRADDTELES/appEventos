@@ -17,4 +17,9 @@
     <string name="label_lembrete">Notificação de Lembrete</string>
     <string name="label_desligado">Desligado</string>
     <string name="label_ligado">Ligado</string>
+    <string name="label_tipo_de_evento">Tipo de Evento:</string>
+    <string name="label_tipo_pessoal">Pessoal</string>
+    <string name="label_tipo_corporativo">Corporativo</string>
+    <string name="label_tipo_festivo">Festivo</string>
+    <string name="label_tp_evento_selecionado">Tipo de Evento Selecionado:</string>
 </resources>

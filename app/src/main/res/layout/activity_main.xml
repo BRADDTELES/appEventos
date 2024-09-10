@@ -312,5 +312,59 @@
             android:text="@string/label_desligado" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/tipoEventoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/label_tipo_de_evento" />
+
+        <RadioGroup
+            android:id="@+id/tipoEventoRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_tipo_pessoal" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_tipo_corporativo" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_tipo_festivo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tpEventoSelecionadoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tp_evento_selecionado" />
+        </RadioGroup>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

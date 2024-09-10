@@ -11,6 +11,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
     CheckBox confirmacaoCheckBox;
 
     Switch lembreteSwitch;
+
+    RadioGroup tipoEventoRadioGroup;
+    TextView tpEventoSelecionadoTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,6 +162,18 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     lembreteSwitch.setText(R.string.label_desligado);
                 }
+            }
+        });
+
+        tipoEventoRadioGroup = findViewById(R.id.tipoEventoRadioGroup);
+        tpEventoSelecionadoTextView = findViewById(R.id.tpEventoSelecionadoTextView);
+
+        tipoEventoRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+                RadioButton radioButton = findViewById(checkedId);
+                String opcaoSelecionada = radioButton.getText().toString();
+                tpEventoSelecionadoTextView.setText(opcaoSelecionada);
             }
         });
     }
