@@ -325,21 +325,21 @@
 
             <RadioButton
                 android:id="@+id/radioButton9"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/label_tipo_pessoal" />
 
             <RadioButton
                 android:id="@+id/radioButton7"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/label_tipo_corporativo" />
 
             <RadioButton
                 android:id="@+id/radioButton8"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/label_tipo_festivo" />
