@@ -19,7 +19,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.appeventos.util.UtilDate;
 import com.example.appeventos.util.UtilTime;
@@ -107,13 +106,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        eventoTextView = findViewById(R.id.eventoTextView);
+//        eventoTextView = findViewById(R.id.eventoTextView);
         eventoImageView = findViewById(R.id.eventoImageView);
         eventoNumberPicker = findViewById(R.id.eventoNumberPicker);
 
-        eventos[0] = "Festivo";
+        eventos[0] = "Pessoal";
         eventos[1] = "Coorporativo";
-        eventos[2] = "Casamento";
+        eventos[2] = "Festivo";
 
         eventoNumberPicker.setDisplayedValues(eventos);
 
@@ -125,15 +124,15 @@ public class MainActivity extends AppCompatActivity {
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
                 String eventoSelecionado = eventos[newVal];
                 if (eventoSelecionado.equalsIgnoreCase("Festivo")){
-                    eventoImageView.setImageResource(R.drawable.festivo);
-//                    eventoTextView.setText("Festivo");
+                    eventoImageView.setImageResource(R.drawable.pessoal);
+//                    eventoTextView.setText("Pessoal");
                 } else {
                     if (eventoSelecionado.equalsIgnoreCase("Coorporativo")){
                         eventoImageView.setImageResource(R.drawable.coorporativo);
 //                        eventoTextView.setText("Coorporativo");
                     } else {
-                        eventoImageView.setImageResource(R.drawable.casamento);
-//                        eventoTextView.setText("Casamento");
+                        eventoImageView.setImageResource(R.drawable.festivo);
+//                        eventoTextView.setText("Festivo");
                     }
                 }
             }
@@ -170,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
         tipoEventoRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton radioButton = findViewById(checkedId);
                 String opcaoSelecionada = radioButton.getText().toString();
                 tpEventoSelecionadoTextView.setText(opcaoSelecionada);

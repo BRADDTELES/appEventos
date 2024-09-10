@@ -238,14 +238,6 @@
             android:layout_height="100dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/eventoTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center" />
-
             <ImageView
                 android:id="@+id/eventoImageView"
                 android:layout_width="340dp"
@@ -313,7 +305,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="409dp"
+        android:layout_width="180dp"
         android:layout_height="100dp"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
@@ -331,38 +323,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:text="@string/label_tipo_pessoal" />
 
-                <RadioButton
-                    android:id="@+id/radioButton9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/label_tipo_pessoal" />
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_tipo_corporativo" />
 
-                <RadioButton
-                    android:id="@+id/radioButton7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/label_tipo_corporativo" />
-
-                <RadioButton
-                    android:id="@+id/radioButton8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/label_tipo_festivo" />
-            </LinearLayout>
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_tipo_festivo" />
 
             <TextView
                 android:id="@+id/tpEventoSelecionadoTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_tp_evento_selecionado" />
+
         </RadioGroup>
     </LinearLayout>
 
