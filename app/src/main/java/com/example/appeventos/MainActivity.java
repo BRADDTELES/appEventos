@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         eventoNumberPicker = findViewById(R.id.eventoNumberPicker);
 
         eventos[0] = "Pessoal";
-        eventos[1] = "Coorporativo";
+        eventos[1] = "Corporativo";
         eventos[2] = "Festivo";
 
         eventoNumberPicker.setDisplayedValues(eventos);
@@ -127,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
                     eventoImageView.setImageResource(R.drawable.pessoal);
 //                    eventoTextView.setText("Pessoal");
                 } else {
-                    if (eventoSelecionado.equalsIgnoreCase("Coorporativo")){
-                        eventoImageView.setImageResource(R.drawable.coorporativo);
-//                        eventoTextView.setText("Coorporativo");
+                    if (eventoSelecionado.equalsIgnoreCase("Corporativo")){
+                        eventoImageView.setImageResource(R.drawable.corporativo);
+//                        eventoTextView.setText("Corporativo");
                     } else {
                         eventoImageView.setImageResource(R.drawable.festivo);
 //                        eventoTextView.setText("Festivo");
