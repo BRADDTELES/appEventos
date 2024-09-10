@@ -12,10 +12,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.SeekBar;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.appeventos.util.UtilDate;
 import com.example.appeventos.util.UtilTime;
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView confirmacaoTextView;
     CheckBox confirmacaoCheckBox;
-    
+
+    Switch lembreteSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,6 +144,18 @@ public class MainActivity extends AppCompatActivity {
                     confirmacaoTextView.setText("Confirmação de Evento: Confirmado");
                 } else {
                     confirmacaoTextView.setText("Confirmação de Evento: Nenhuma");
+                }
+            }
+        });
+
+        lembreteSwitch = findViewById(R.id.lembreteSwitch);
+        lembreteSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    lembreteSwitch.setText(R.string.label_ligado);
+                } else {
+                    lembreteSwitch.setText(R.string.label_desligado);
                 }
             }
         });
