@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.appeventos.persistencia.Persistencia;
 import com.example.appeventos.util.UtilDate;
 import com.example.appeventos.util.UtilTime;
+import com.example.appeventos.util.UtilToast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -220,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
         String senha = senhaEditText.getText().toString();
         Persistencia.setUsuario(this, usuario);
         Persistencia.setSenha(this, senha);
+        UtilToast.alertaLong(this, "Registro Salvo com sucesso!!! ");
     }
 
     public void carregarButtonAction(View view) {
