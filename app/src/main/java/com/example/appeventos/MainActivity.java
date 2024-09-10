@@ -5,6 +5,8 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView convidadoTextView;
     NumberPicker convidadoNumberPicker;
+
+    TextView confirmacaoTextView;
+    CheckBox confirmacaoCheckBox;
     
 
     @Override
@@ -122,6 +127,20 @@ public class MainActivity extends AppCompatActivity {
                         eventoImageView.setImageResource(R.drawable.casamento);
 //                        eventoTextView.setText("Casamento");
                     }
+                }
+            }
+        });
+
+        confirmacaoTextView = findViewById(R.id.confirmacaoTextView);
+        confirmacaoCheckBox = findViewById(R.id.confirmacaoCheckBox);
+
+        confirmacaoCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    confirmacaoTextView.setText("Confirmação de Evento: Confirmado");
+                } else {
+                    confirmacaoTextView.setText("Confirmação de Evento: Nenhuma");
                 }
             }
         });
