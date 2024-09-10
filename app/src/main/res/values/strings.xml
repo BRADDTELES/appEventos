@@ -22,4 +22,9 @@
     <string name="label_tipo_corporativo">Corporativo</string>
     <string name="label_tipo_festivo">Festivo</string>
     <string name="label_tp_evento_selecionado">Tipo de Evento Selecionado:</string>
+    <string name="text_view_registrar">Registrar</string>
+    <string name="text_view_usuario">Usuaŕio:</string>
+    <string name="text_view_senha">Senha:</string>
+    <string name="button_salvar">Salvar</string>
+    <string name="button_cancelar">Cancelar</string>
 </resources>
