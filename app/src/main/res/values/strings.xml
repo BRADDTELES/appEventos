@@ -14,4 +14,7 @@
     <string name="text_view_convidados">Número de Convidados:</string>
     <string name="text_view_confirmacao">Confirmação de Evento: Nenhuma</string>
     <string name="check_box_confirmacao">Selecione para Confirmar</string>
+    <string name="label_lembrete">Notificação de Lembrete</string>
+    <string name="label_desligado">Desligado</string>
+    <string name="label_ligado">Ligado</string>
 </resources>
